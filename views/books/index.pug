@@ -37,7 +37,8 @@ block content
       if booksProp.nextPage
         a(href=`/books?search=${booksProp.search}&page=${booksProp.nextPage.page}`) Next &rarr;
     else
-      h3 :(
+      p
+        h3 ☹️
       a(href=`/books?search=${booksProp.search}&page=${booksProp.numberOfPages}`) &larr; Prev
       |  | 
       a(href="/") Home
