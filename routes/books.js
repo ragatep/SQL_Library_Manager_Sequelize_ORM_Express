@@ -29,6 +29,7 @@ router.get('/', paginatedResults(Book), asyncHandler(async (req, res) => {
     title: " I love books! ❤️ " ,
   });
 }));
+/* '/' redirects to '/books' */
 /* GET create a new book form. */
 router.get('/new', (req, res) => {
   res.render("books/new-book", { book: {}, title: "New Book" });
@@ -142,7 +143,6 @@ router.get("/:id/delete", asyncHandler(async (req, res) => {
       res.status(404).render('./page-not-found');
     }
 }));
-
 /* POST delete individual book. */
 router.post('/:id/delete', asyncHandler(async (req ,res) => {
   /**
@@ -179,7 +179,7 @@ router.post('/:id/delete', asyncHandler(async (req ,res) => {
     const endIndex = page * limit;
 
     const search = req.query.search || "";
-    console.log(req.query.search);
+    // console.log(search);
     
     const { count, rows } = await model.findAndCountAll(
       {
