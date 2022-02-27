@@ -1,0 +1,6 @@
+if(errorsProp)
+  h2.errorsProp Oops an error occurred!
+  ul.errorsProp
+    each error in errorsProp
+      li
+        =error.message

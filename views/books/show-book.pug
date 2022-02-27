@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  h2= book.title
+  include by_line
+  p= book.genre
+  a(href="../") &larr; Back 
+  | | 
+  a(href=`/books/${book.id}/update-book`) Edit book 
+  | | 
+  a(href=`/books/${book.id}/delete`) Delete book 

@@ -1,0 +1,45 @@
+extends ../layout
+
+block content
+  .topnav
+    a(href="../") Home
+    .search-container
+      form(method="GET", action="")
+        input(type="text", placeholder="Search..", name="search")
+        button(type="submit", value="Search")
+          i.fa.fa-search
+  h2 Books
+  p
+    a.button(href="books/new") Add a book &#43;
+    
+  table
+    thead
+      tr
+        th Title
+        th Author
+        th Genre
+        th Year
+    tbody
+      each book in booksProp.rows
+        tr
+          td
+            a(href=`/books/${book.id}`) #{book.title}
+          td #{book.author}
+          td #{book.genre}
+          td #{book.year}
+    
+  div.pagination
+    if booksProp.numberOfPages > 0 && booksProp.page <= booksProp.numberOfPages
+      p Page #{booksProp.page} of #{booksProp.numberOfPages}
+      if booksProp.previousPage
+        a(href=`/books?search=${booksProp.search}&page=${booksProp.previousPage.page}`) &larr; Prev
+        |  | 
+      if booksProp.nextPage
+        a(href=`/books?search=${booksProp.search}&page=${booksProp.nextPage.page}`) Next &rarr;
+    else
+      h3 :(
+      a(href=`/books?search=${booksProp.search}&page=${booksProp.numberOfPages}`) &larr; Prev
+      |  | 
+      a(href="/") Home
+
+

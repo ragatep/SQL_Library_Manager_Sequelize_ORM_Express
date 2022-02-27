@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  div.container
+    h1= `Server Error`
+    h2= `Error status code: ${err.status} - Server Error`
+    p.error-p= `Human friendly error message: ${err.message}`
+
+    a(href="../") Home
+
+    div.not-found-stack
+      hr
+      pre #{err.stack}

@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+  h2= title
+  include errors
+  
+  form(action="/books/new", method="POST")
+    include form

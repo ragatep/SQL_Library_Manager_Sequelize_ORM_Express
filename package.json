@@ -1,0 +1,33 @@
+{
+  "name": "sql-library-manager--sequelize-orm-express",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "^0.29.0",
+    "morgan": "~1.9.1",
+    "pug": "^3.0.2",
+    "sequelize": "^5.10.1",
+    "sequelize-cli": "^6.4.1",
+    "sqlite3": "^4.2.0"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ragatep/SQL_Library_Manager_Sequelize_ORM_Express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ragatep/SQL_Library_Manager_Sequelize_ORM_Express/issues"
+  },
+  "homepage": "https://github.com/ragatep/SQL_Library_Manager_Sequelize_ORM_Express#readme",
+  "description": ""
+}
