@@ -4,17 +4,17 @@ block content
 
     p
         label(for="title") Title
-        input(name="title", type="text", value=book.title)
+        input(name="title", type="text", id="title", value=book.title)
     p
         label(for="author") Author
-        input(name="author", type="text", value=book.author)
+        input(name="author", type="text", id="author", value=book.author)
     p
         label(for="genre") Genre
-        input(name="genre", type="text", value=book.genre)
+        input(name="genre", type="text", id="genre", value=book.genre)
     p
         label(for="year") Year
-        input(name="year", type="text", value=book.year)
+        input(name="year", type="text", id="year", value=book.year)
     p
-        input(type="submit" value="Submit")
+        input(type="submit", value="Submit")
     p
         a.button(href="/books") Cancel
